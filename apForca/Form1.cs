@@ -304,5 +304,15 @@ namespace apListaLigada
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tpForca_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
