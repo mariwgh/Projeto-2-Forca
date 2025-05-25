@@ -17,6 +17,18 @@ namespace apListaLigada
         string palavra, dica;
         private const int tamanhoMaximo = 30;
 
+        // propriedades e metodos projeto II:
+            // propriedade de acesso
+        bool acertou;   // vetor de valores lógicos que sempre será iniciado com 15 posições valendo falso
+
+        public void Acertou()
+        {
+            // retornar true se a letra sorteada está na palavra
+            // atualizando o vetor acertou com true nas posições onde a encontrou;
+            acertou = true;
+        }
+
+        // projeto I
         public string Palavra
         {
             get => palavra;

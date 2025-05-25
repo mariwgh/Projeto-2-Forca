@@ -58,6 +58,33 @@
             this.rbFrente = new System.Windows.Forms.RadioButton();
             this.lsbDados = new System.Windows.Forms.ListBox();
             this.tpForca = new System.Windows.Forms.TabPage();
+            this.pictEnforcado = new System.Windows.Forms.PictureBox();
+            this.labelTempo = new System.Windows.Forms.Label();
+            this.labelErros = new System.Windows.Forms.Label();
+            this.labelPontos = new System.Windows.Forms.Label();
+            this.labelDica = new System.Windows.Forms.Label();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.txtPortaArduino = new System.Windows.Forms.TextBox();
+            this.btnIniciar = new System.Windows.Forms.Button();
+            this.checkArduino = new System.Windows.Forms.CheckBox();
+            this.checkDica = new System.Windows.Forms.CheckBox();
+            this.labelArduino = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.button39 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
@@ -110,43 +137,30 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ssMensagem = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.slRegistro = new System.Windows.Forms.ToolStripStatusLabel();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.labelArduino = new System.Windows.Forms.Label();
-            this.checkDica = new System.Windows.Forms.CheckBox();
-            this.checkArduino = new System.Windows.Forms.CheckBox();
-            this.btnIniciar = new System.Windows.Forms.Button();
-            this.txtPortaArduino = new System.Windows.Forms.TextBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.slRegistro = new System.Windows.Forms.ToolStripStatusLabel();
             this.imlBotoes = new System.Windows.Forms.ImageList(this.components);
             this.tmrTempo = new System.Windows.Forms.Timer(this.components);
-            this.labelDica = new System.Windows.Forms.Label();
-            this.labelPontos = new System.Windows.Forms.Label();
-            this.labelErros = new System.Windows.Forms.Label();
-            this.labelTempo = new System.Windows.Forms.Label();
-            this.pictEnforcado = new System.Windows.Forms.PictureBox();
             this.tsBotoes.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpCadastro.SuspendLayout();
             this.tpListagem.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tpForca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictEnforcado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -155,20 +169,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ssMensagem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictEnforcado)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -356,6 +356,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(631, 498);
             this.tabControl1.TabIndex = 22;
+            this.tabControl1.VisibleChanged += new System.EventHandler(this.tabControl1_VisibleChanged);
             this.tabControl1.Enter += new System.EventHandler(this.tabControl1_Enter);
             // 
             // tpCadastro
@@ -367,7 +368,7 @@
             this.tpCadastro.Location = new System.Drawing.Point(4, 26);
             this.tpCadastro.Name = "tpCadastro";
             this.tpCadastro.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCadastro.Size = new System.Drawing.Size(609, 444);
+            this.tpCadastro.Size = new System.Drawing.Size(623, 468);
             this.tpCadastro.TabIndex = 0;
             this.tpCadastro.Text = "Cadastro";
             this.tpCadastro.UseVisualStyleBackColor = true;
@@ -385,10 +386,10 @@
             // 
             this.tpListagem.Controls.Add(this.groupBox1);
             this.tpListagem.Controls.Add(this.lsbDados);
-            this.tpListagem.Location = new System.Drawing.Point(4, 22);
+            this.tpListagem.Location = new System.Drawing.Point(4, 26);
             this.tpListagem.Name = "tpListagem";
             this.tpListagem.Padding = new System.Windows.Forms.Padding(3);
-            this.tpListagem.Size = new System.Drawing.Size(609, 448);
+            this.tpListagem.Size = new System.Drawing.Size(623, 468);
             this.tpListagem.TabIndex = 1;
             this.tpListagem.Text = "Listagem";
             this.tpListagem.UseVisualStyleBackColor = true;
@@ -523,6 +524,271 @@
             this.tpForca.TabIndex = 2;
             this.tpForca.Text = "Forca";
             this.tpForca.UseVisualStyleBackColor = true;
+            // 
+            // pictEnforcado
+            // 
+            this.pictEnforcado.Image = ((System.Drawing.Image)(resources.GetObject("pictEnforcado.Image")));
+            this.pictEnforcado.Location = new System.Drawing.Point(245, 0);
+            this.pictEnforcado.Name = "pictEnforcado";
+            this.pictEnforcado.Size = new System.Drawing.Size(96, 134);
+            this.pictEnforcado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictEnforcado.TabIndex = 83;
+            this.pictEnforcado.TabStop = false;
+            // 
+            // labelTempo
+            // 
+            this.labelTempo.AutoSize = true;
+            this.labelTempo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelTempo.Location = new System.Drawing.Point(463, 405);
+            this.labelTempo.Name = "labelTempo";
+            this.labelTempo.Size = new System.Drawing.Size(48, 17);
+            this.labelTempo.TabIndex = 82;
+            this.labelTempo.Text = "____s";
+            // 
+            // labelErros
+            // 
+            this.labelErros.AutoSize = true;
+            this.labelErros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelErros.Location = new System.Drawing.Point(298, 405);
+            this.labelErros.Name = "labelErros";
+            this.labelErros.Size = new System.Drawing.Size(40, 17);
+            this.labelErros.TabIndex = 81;
+            this.labelErros.Text = "____";
+            // 
+            // labelPontos
+            // 
+            this.labelPontos.AutoSize = true;
+            this.labelPontos.ForeColor = System.Drawing.Color.Green;
+            this.labelPontos.Location = new System.Drawing.Point(306, 383);
+            this.labelPontos.Name = "labelPontos";
+            this.labelPontos.Size = new System.Drawing.Size(40, 17);
+            this.labelPontos.TabIndex = 80;
+            this.labelPontos.Text = "____";
+            // 
+            // labelDica
+            // 
+            this.labelDica.AutoSize = true;
+            this.labelDica.ForeColor = System.Drawing.Color.Purple;
+            this.labelDica.Location = new System.Drawing.Point(294, 356);
+            this.labelDica.Name = "labelDica";
+            this.labelDica.Size = new System.Drawing.Size(320, 17);
+            this.labelDica.TabIndex = 79;
+            this.labelDica.Text = "_______________________________________";
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
+            this.pictureBox19.Location = new System.Drawing.Point(121, 129);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(101, 94);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox19.TabIndex = 78;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(4, 129);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(69, 192);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox18.TabIndex = 77;
+            this.pictureBox18.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(73, 129);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(48, 94);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox17.TabIndex = 76;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+            this.pictureBox16.Location = new System.Drawing.Point(73, 222);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(57, 40);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox16.TabIndex = 75;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
+            this.pictureBox15.Location = new System.Drawing.Point(164, 370);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(58, 91);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox15.TabIndex = 74;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.Location = new System.Drawing.Point(95, 370);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(68, 91);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox14.TabIndex = 73;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(130, 320);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(63, 50);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox13.TabIndex = 72;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(193, 238);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(68, 58);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox12.TabIndex = 71;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(74, 222);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(57, 40);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox11.TabIndex = 70;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(130, 238);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(63, 82);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox10.TabIndex = 69;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(130, 222);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(92, 16);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox9.TabIndex = 68;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(121, 129);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(101, 94);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox8.TabIndex = 67;
+            this.pictureBox8.TabStop = false;
+            // 
+            // txtPortaArduino
+            // 
+            this.txtPortaArduino.Location = new System.Drawing.Point(529, 421);
+            this.txtPortaArduino.Name = "txtPortaArduino";
+            this.txtPortaArduino.Size = new System.Drawing.Size(47, 24);
+            this.txtPortaArduino.TabIndex = 66;
+            this.txtPortaArduino.Text = "______";
+            // 
+            // btnIniciar
+            // 
+            this.btnIniciar.Location = new System.Drawing.Point(528, 379);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(75, 23);
+            this.btnIniciar.TabIndex = 65;
+            this.btnIniciar.Text = "Iniciar";
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            // 
+            // checkArduino
+            // 
+            this.checkArduino.AutoSize = true;
+            this.checkArduino.Location = new System.Drawing.Point(257, 428);
+            this.checkArduino.Name = "checkArduino";
+            this.checkArduino.Size = new System.Drawing.Size(76, 21);
+            this.checkArduino.TabIndex = 64;
+            this.checkArduino.Text = "Arduino";
+            this.checkArduino.UseVisualStyleBackColor = true;
+            // 
+            // checkDica
+            // 
+            this.checkDica.AutoSize = true;
+            this.checkDica.Location = new System.Drawing.Point(358, 379);
+            this.checkDica.Name = "checkDica";
+            this.checkDica.Size = new System.Drawing.Size(90, 21);
+            this.checkDica.TabIndex = 63;
+            this.checkDica.Text = "Com dica";
+            this.checkDica.UseVisualStyleBackColor = true;
+            // 
+            // labelArduino
+            // 
+            this.labelArduino.AutoSize = true;
+            this.labelArduino.Location = new System.Drawing.Point(355, 428);
+            this.labelArduino.Name = "labelArduino";
+            this.labelArduino.Size = new System.Drawing.Size(171, 17);
+            this.labelArduino.TabIndex = 62;
+            this.labelArduino.Text = "Porta serial para Arduino:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label9.Location = new System.Drawing.Point(354, 405);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 17);
+            this.label9.TabIndex = 61;
+            this.label9.Text = "Tempo restante:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(253, 405);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 17);
+            this.label6.TabIndex = 58;
+            this.label6.Text = "Erros:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Green;
+            this.label5.Location = new System.Drawing.Point(253, 383);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 17);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "Pontos:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Purple;
+            this.label4.Location = new System.Drawing.Point(253, 357);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 17);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "Dica:";
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(249, 313);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(363, 31);
+            this.dataGridView.TabIndex = 55;
             // 
             // button39
             // 
@@ -1000,232 +1266,17 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
             this.toolStripStatusLabel1.Text = "Mensagem:";
             // 
-            // slRegistro
-            // 
-            this.slRegistro.Name = "slRegistro";
-            this.slRegistro.Size = new System.Drawing.Size(72, 17);
-            this.slRegistro.Text = "Hora:__:__:__";
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(249, 313);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(363, 31);
-            this.dataGridView.TabIndex = 55;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Purple;
-            this.label4.Location = new System.Drawing.Point(253, 357);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 17);
-            this.label4.TabIndex = 56;
-            this.label4.Text = "Dica:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Green;
-            this.label5.Location = new System.Drawing.Point(253, 383);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 17);
-            this.label5.TabIndex = 57;
-            this.label5.Text = "Pontos:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(253, 405);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 17);
-            this.label6.TabIndex = 58;
-            this.label6.Text = "Erros:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(354, 405);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 17);
-            this.label9.TabIndex = 61;
-            this.label9.Text = "Tempo restante:";
-            // 
-            // labelArduino
-            // 
-            this.labelArduino.AutoSize = true;
-            this.labelArduino.Location = new System.Drawing.Point(355, 428);
-            this.labelArduino.Name = "labelArduino";
-            this.labelArduino.Size = new System.Drawing.Size(171, 17);
-            this.labelArduino.TabIndex = 62;
-            this.labelArduino.Text = "Porta serial para Arduino:";
-            // 
-            // checkDica
-            // 
-            this.checkDica.AutoSize = true;
-            this.checkDica.Location = new System.Drawing.Point(358, 379);
-            this.checkDica.Name = "checkDica";
-            this.checkDica.Size = new System.Drawing.Size(90, 21);
-            this.checkDica.TabIndex = 63;
-            this.checkDica.Text = "Com dica";
-            this.checkDica.UseVisualStyleBackColor = true;
-            // 
-            // checkArduino
-            // 
-            this.checkArduino.AutoSize = true;
-            this.checkArduino.Location = new System.Drawing.Point(257, 428);
-            this.checkArduino.Name = "checkArduino";
-            this.checkArduino.Size = new System.Drawing.Size(76, 21);
-            this.checkArduino.TabIndex = 64;
-            this.checkArduino.Text = "Arduino";
-            this.checkArduino.UseVisualStyleBackColor = true;
-            // 
-            // btnIniciar
-            // 
-            this.btnIniciar.Location = new System.Drawing.Point(528, 379);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(75, 23);
-            this.btnIniciar.TabIndex = 65;
-            this.btnIniciar.Text = "Iniciar";
-            this.btnIniciar.UseVisualStyleBackColor = true;
-            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
-            // 
-            // txtPortaArduino
-            // 
-            this.txtPortaArduino.Location = new System.Drawing.Point(529, 421);
-            this.txtPortaArduino.Name = "txtPortaArduino";
-            this.txtPortaArduino.Size = new System.Drawing.Size(47, 24);
-            this.txtPortaArduino.TabIndex = 66;
-            this.txtPortaArduino.Text = "______";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(121, 129);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(101, 94);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox8.TabIndex = 67;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(130, 222);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(92, 16);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox9.TabIndex = 68;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(130, 238);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(63, 82);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox10.TabIndex = 69;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(74, 222);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(57, 40);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox11.TabIndex = 70;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(193, 238);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(68, 58);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox12.TabIndex = 71;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(130, 320);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(63, 50);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox13.TabIndex = 72;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(95, 370);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(68, 91);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox14.TabIndex = 73;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(164, 370);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(58, 91);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox15.TabIndex = 74;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(73, 222);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(57, 40);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox16.TabIndex = 75;
-            this.pictureBox16.TabStop = false;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(73, 129);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(48, 94);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox17.TabIndex = 76;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(4, 129);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(69, 192);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox18.TabIndex = 77;
-            this.pictureBox18.TabStop = false;
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(121, 129);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(101, 94);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox19.TabIndex = 78;
-            this.pictureBox19.TabStop = false;
-            // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(74, 17);
             this.toolStripStatusLabel2.Text = "Data:__/__/__";
+            // 
+            // slRegistro
+            // 
+            this.slRegistro.Name = "slRegistro";
+            this.slRegistro.Size = new System.Drawing.Size(72, 17);
+            this.slRegistro.Text = "Hora:__:__:__";
             // 
             // imlBotoes
             // 
@@ -1252,56 +1303,6 @@
             this.imlBotoes.Images.SetKeyName(18, "Forca_16.gif");
             this.imlBotoes.Images.SetKeyName(19, "Forca_17.gif");
             // 
-            // labelDica
-            // 
-            this.labelDica.AutoSize = true;
-            this.labelDica.ForeColor = System.Drawing.Color.Purple;
-            this.labelDica.Location = new System.Drawing.Point(294, 356);
-            this.labelDica.Name = "labelDica";
-            this.labelDica.Size = new System.Drawing.Size(320, 17);
-            this.labelDica.TabIndex = 79;
-            this.labelDica.Text = "_______________________________________";
-            // 
-            // labelPontos
-            // 
-            this.labelPontos.AutoSize = true;
-            this.labelPontos.ForeColor = System.Drawing.Color.Green;
-            this.labelPontos.Location = new System.Drawing.Point(306, 383);
-            this.labelPontos.Name = "labelPontos";
-            this.labelPontos.Size = new System.Drawing.Size(40, 17);
-            this.labelPontos.TabIndex = 80;
-            this.labelPontos.Text = "____";
-            // 
-            // labelErros
-            // 
-            this.labelErros.AutoSize = true;
-            this.labelErros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelErros.Location = new System.Drawing.Point(298, 405);
-            this.labelErros.Name = "labelErros";
-            this.labelErros.Size = new System.Drawing.Size(40, 17);
-            this.labelErros.TabIndex = 81;
-            this.labelErros.Text = "____";
-            // 
-            // labelTempo
-            // 
-            this.labelTempo.AutoSize = true;
-            this.labelTempo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelTempo.Location = new System.Drawing.Point(463, 405);
-            this.labelTempo.Name = "labelTempo";
-            this.labelTempo.Size = new System.Drawing.Size(48, 17);
-            this.labelTempo.TabIndex = 82;
-            this.labelTempo.Text = "____s";
-            // 
-            // pictEnforcado
-            // 
-            this.pictEnforcado.Image = ((System.Drawing.Image)(resources.GetObject("pictEnforcado.Image")));
-            this.pictEnforcado.Location = new System.Drawing.Point(245, 0);
-            this.pictEnforcado.Name = "pictEnforcado";
-            this.pictEnforcado.Size = new System.Drawing.Size(96, 134);
-            this.pictEnforcado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictEnforcado.TabIndex = 83;
-            this.pictEnforcado.TabStop = false;
-            // 
             // FrmAlunos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1324,6 +1325,20 @@
             this.groupBox1.PerformLayout();
             this.tpForca.ResumeLayout(false);
             this.tpForca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictEnforcado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1333,20 +1348,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ssMensagem.ResumeLayout(false);
             this.ssMensagem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictEnforcado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

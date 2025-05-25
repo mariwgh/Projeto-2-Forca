@@ -288,8 +288,31 @@ namespace apListaLigada
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            // sorteio do número do elemento (posicao?) que será acessado na lista interno dados do ListaDicionario
-            Random.Next(Dicionario.posicao);
+            // cria uma instância de Random para gerar números aleatórios
+            Random random = new Random();
+
+            // sorteio do número do elemento (posição) que será acessado na lista
+            int posicaoSorteada = random.Next(lista1.QuantosNos);
+
+            // chama o evento para ocultar a aba de cadastro
+            tabControl1_VisibleChanged(sender, e);
+        }
+
+        private void tabControl1_VisibleChanged(object sender, EventArgs e)
+        {
+            // verifica se a aba de cadastro já está visível ou não
+            // se estiver visível, remove a aba; se não estiver, adiciona a aba
+            if (tabControl1.Contains(tpCadastro))
+            {
+                // remover a aba de cadastro
+                tabControl1.TabPages.Remove(tpCadastro);
+            }
+            else
+            {
+                // adicionar a aba de cadastro
+                tabControl1.TabPages.Add(tpCadastro);
+            }
+                
         }
     }
 }
