@@ -1091,6 +1091,7 @@
             this.btnIniciar.TabIndex = 65;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // txtPortaArduino
             // 

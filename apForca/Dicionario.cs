@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace apListaLigada
 {
-    public class PalavraDica : IComparable<PalavraDica>, IRegistro,
-                      ICriterioDeSeparacao<PalavraDica>
+    public class Dicionario : IComparable<Dicionario>, IRegistro,
+                      ICriterioDeSeparacao<Dicionario>
     {
-        // atributos da classe PalavraDica:
+        // atributos da antiga classe PalavraDica, agora Dicionario:
         string palavra, dica;
         private const int tamanhoMaximo = 30;
 
@@ -44,7 +44,7 @@ namespace apListaLigada
 
         // construtores da classe PalavraDica: 
         // se passar a palavra e a dica ja separadas
-        public PalavraDica(string palavra, string dica)
+        public Dicionario(string palavra, string dica)
         {
             // se a palavra for maior que o tamanho máximo, lança uma exceção
             if (palavra.Length > tamanhoMaximo)
@@ -57,7 +57,7 @@ namespace apListaLigada
         }
 
         // se passar a palavra e a dica juntas
-        public PalavraDica(string linhaDeDados)
+        public Dicionario(string linhaDeDados)
         {
             // separa a palavra, que é do 0 ate 30
             Palavra = linhaDeDados.PadRight(tamanhoMaximo, ' ').Substring(0, tamanhoMaximo);
@@ -76,7 +76,7 @@ namespace apListaLigada
         }
 
 
-        public int CompareTo(PalavraDica other)
+        public int CompareTo(Dicionario other)
         {
             return this.palavra.CompareTo(other.palavra);
         }

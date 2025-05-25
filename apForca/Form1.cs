@@ -7,12 +7,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace apListaLigada
 {
     public partial class FrmAlunos : Form
     {
-        ListaDupla<PalavraDica> lista1;
+        ListaDupla<Dicionario> lista1;
 
         string caminho = null;
 
@@ -27,10 +28,10 @@ namespace apListaLigada
 
         }
 
-        private void FazerLeitura(ref ListaDupla<PalavraDica> qualLista)
+        private void FazerLeitura(ref ListaDupla<Dicionario> qualLista)
         {
             // instanciar a lista de palavras e dicas
-            ListaDupla<PalavraDica> listaPalavraDica = new ListaDupla<PalavraDica>();
+            ListaDupla<Dicionario> listaPalavraDica = new ListaDupla<Dicionario>();
 
             // pedir ao usuário o nome do arquivo de entrada
             OpenFileDialog ofd = new OpenFileDialog();
@@ -48,7 +49,7 @@ namespace apListaLigada
                 linha = arquivo.ReadLine();
 
                 // para cada linha, criar um objeto da classe de Palavra e Dica
-                PalavraDica palavraDica = new PalavraDica(linha);
+                Dicionario palavraDica = new Dicionario(linha);
 
                 // e inseri-lo no final da lista duplamente ligada
                 listaPalavraDica.InserirAposFim(palavraDica);
@@ -65,7 +66,7 @@ namespace apListaLigada
             if (txtPalavra.Text != "" && txtDica.Text != "")
             {
                 // criar objeto da classe Palavra e Dica para busca
-                PalavraDica palavraDica = new PalavraDica(txtPalavra.Text, txtDica.Text);
+                Dicionario palavraDica = new Dicionario(txtPalavra.Text, txtDica.Text);
 
                 // tentar incluir em ordem esse objeto na lista1
                 try
@@ -88,12 +89,12 @@ namespace apListaLigada
             if (txtPalavra.Text != "")
             {
                 // criar um objeto da classe de Palavra e Dica para busca
-                PalavraDica palavraDica = new PalavraDica(txtPalavra.Text, "-");
+                Dicionario palavraDica = new Dicionario(txtPalavra.Text, "-");
 
                 // se a palavra existe na lista1, posicionar o ponteiro atual nesse nó e exibir o registro atual
                 if (lista1.Existe(palavraDica))
                 {
-                    NoDuplo<PalavraDica> aux = lista1.Primeiro;         // ponteiro auxiliar para percorrer a lista que comeca com o primeiro no
+                    NoDuplo<Dicionario> aux = lista1.Primeiro;         // ponteiro auxiliar para percorrer a lista que comeca com o primeiro no
                     int indiceBuscado = 0;
 
                     while (aux != null)
@@ -139,7 +140,7 @@ namespace apListaLigada
                 // se sim, remover o nó atual da lista duplamente ligada e exibir o próximo nó
                 if (resposta == DialogResult.Yes)
                 {
-                    lista1.Remover(new PalavraDica(txtPalavra.Text, "-"));
+                    lista1.Remover(new Dicionario(txtPalavra.Text, "-"));
                     MessageBox.Show("Excluído!");
                     
                     ExibirRegistroAtual();
@@ -283,6 +284,12 @@ namespace apListaLigada
         private void txtPalavra_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            // sorteio do número do elemento (posicao?) que será acessado na lista interno dados do ListaDicionario
+            Random.Next(Dicionario.posicao);
         }
     }
 }
