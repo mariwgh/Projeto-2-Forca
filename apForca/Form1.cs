@@ -294,8 +294,17 @@ namespace apListaLigada
             // sorteio do número do elemento (posição) que será acessado na lista
             int posicaoSorteada = random.Next(lista1.QuantosNos);
 
+            // posiciona o ponteiro atual na posição sorteada
+            lista1.PosicionarEm(posicaoSorteada);
+
             // chama o evento para ocultar a aba de cadastro
             tabControl1_VisibleChanged(sender, e);
+
+            if (checkDica.Checked)
+            {
+                // exibe a dica da palavra sorteada lida noS label [Dica:].
+                labelDica.Text = $"{lista1.Atual.Info.Dica}";
+            }
         }
 
         private void tabControl1_VisibleChanged(object sender, EventArgs e)
