@@ -20,7 +20,7 @@ namespace apListaLigada
         // propriedades e metodos projeto II:
             // propriedade de acesso
         bool acertou;   // vetor de valores lógicos que sempre será iniciado com 15 posições valendo falso
-
+        
         public void Acertou()
         {
             // retornar true se a letra sorteada está na palavra

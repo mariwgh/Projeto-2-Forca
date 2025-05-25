@@ -305,6 +305,12 @@ namespace apListaLigada
                 // exibe a dica da palavra sorteada lida noS label [Dica:].
                 labelDica.Text = $"{lista1.Atual.Info.Dica}";
             }
+
+            // limpa o DataGridView
+            dataGridView.Columns.Clear();
+
+            // configura para que o numero de colunas seja igual ao número de caracteres (sem os espaços à direita) da palavra lida do arquivo.
+            dataGridView.ColumnCount = lista1.Atual.Info.Palavra.ToUpper().Trim().Length;
         }
 
         private void tabControl1_VisibleChanged(object sender, EventArgs e)
