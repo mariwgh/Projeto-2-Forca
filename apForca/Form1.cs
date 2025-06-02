@@ -326,8 +326,32 @@ namespace apListaLigada
             {
                 // adicionar a aba de cadastro
                 tabControl1.TabPages.Add(tpCadastro);
+            }    
+        }
+
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            // pegar letra clicada
+            string letra = (sender as Button).Text;
+
+            // verificar se a letra existe na palavra sorteada
+            string palavra = lista1.Atual.Info.Palavra.ToUpper().Trim();
+
+            bool acerto = false;
+            
+            for (int i = 0; i <= palavra.Length; i++)
+            {
+                if (palavra.Substring(i, i + 1).Equals(letra))
+                {
+                    // exibí-la na posição do DataGridView
+                    dataGridView[i, 0].Value = letra;
+
+                    // marcar com true essa mesma posição no vetor acertou
+                    lista1.Atual.Info.acertou.PosicionarEm(i); // Marca a posição como acertada
+                    acerto = true;
+                }
             }
-                
         }
     }
 }
