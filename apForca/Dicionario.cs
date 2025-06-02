@@ -19,7 +19,7 @@ namespace apListaLigada
 
         // propriedades e metodos projeto II:
             // propriedade de acesso
-        public ListaDupla<Dicionario> acertou;   // vetor de valores lógicos que sempre será iniciado com 15 posições valendo falso
+        public List<bool> acertou;   // vetor de valores lógicos que sempre será iniciado com 15 posições valendo falso
 
         public bool ExisteLetra(string letra)
         {
@@ -32,10 +32,8 @@ namespace apListaLigada
             {
                 if (Palavra[i].ToString().ToUpper() == letra.ToString().ToUpper())
                 {
-                    acertou.PosicionarEm(i);
-
                     // atualizando o vetor acertou com true nas posições onde a encontrou;
-                    acertou.Atual.Info = true;
+                    acertou.Insert(i, true);
 
                     encontrou = true;
                 }
@@ -44,12 +42,16 @@ namespace apListaLigada
             return encontrou;
         }
 
-        public ListaDupla<Dicionario> Acertou
+        public List<bool> Acertou
         {
             get => acertou;
             set
             {
                 // sempre será iniciado com 15 posições valendo falso.
+                for (int i = 0; i < 15; i++)
+                {
+                    acertou.Insert(i, false);
+                }
 
                 //Retornar o vetor acertou, contendo true nas posições em que letras indicadas pelo jogador
                 //foram encontradas na palavra e false nas posições em que as letras correspondentes

@@ -337,15 +337,19 @@ namespace apListaLigada
 
             // verificar se a letra existe na palavra sorteada
             string palavra = lista1.Atual.Info.Palavra.ToUpper().Trim();
-
+            
             if (lista1.Atual.Info.ExisteLetra(letra)) 
             {
-                // exibí-la na posição do DataGridView
-                dataGridView[lista1.Atual.Info.acertou.NumeroDoNoAtual, 0].Value = letra;
+                for (int i = 0; i < palavra.Length; i++)
+                {
+                    if (lista1.Atual.Info.acertou === true)
+                        // exibí-la na posição do DataGridView
+                        dataGridView[i, 0].Value = letra;
 
-                //marcar com true essa mesma posição no vetor acertou do objeto
-                // Dicionario que foi sorteado e está armazenado no
-                // vetor interno dados de VetorDicionario.
+                    //marcar com true essa mesma posição no vetor acertou do objeto
+                    // Dicionario que foi sorteado e está armazenado no
+                    // vetor interno dados de VetorDicionario.
+                }
             }
         }
     }
