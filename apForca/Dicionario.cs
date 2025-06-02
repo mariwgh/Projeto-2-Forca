@@ -21,15 +21,22 @@ namespace apListaLigada
             // propriedade de acesso
         public ListaDupla<Dicionario> acertou;   // vetor de valores lógicos que sempre será iniciado com 15 posições valendo falso
 
-        public bool Acertou(char letra)
+        public bool ExisteLetra(string letra)
         {
+            // retornar false caso a letra sorteada não exista na palavra
             bool encontrou = false;
+
+            // Retornar true se a letra sorteada está na palavra(pode haver mais de uma posição)
 
             for (int i = 0; i < Palavra.Length; i++)
             {
                 if (Palavra[i].ToString().ToUpper() == letra.ToString().ToUpper())
                 {
-                    acertou.PosicionarEm(i); // Marca como true na posição do vetor acerto
+                    acertou.PosicionarEm(i);
+
+                    // atualizando o vetor acertou com true nas posições onde a encontrou;
+                    acertou.Atual.Info = true;
+
                     encontrou = true;
                 }
             }
@@ -37,6 +44,18 @@ namespace apListaLigada
             return encontrou;
         }
 
+        public ListaDupla<Dicionario> Acertou
+        {
+            get => acertou;
+            set
+            {
+                // sempre será iniciado com 15 posições valendo falso.
+
+                //Retornar o vetor acertou, contendo true nas posições em que letras indicadas pelo jogador
+                //foram encontradas na palavra e false nas posições em que as letras correspondentes
+                //ainda não foram indicadas.
+            }
+        }
 
         // projeto I
         public string Palavra
@@ -74,7 +93,7 @@ namespace apListaLigada
                 throw new Exception("30 caracteres atingidos.");
             }
 
-            acertou = false;
+            Acertou = acertou;
 
             Palavra = palavra;
             Dica = dica;
