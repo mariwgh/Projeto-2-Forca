@@ -286,6 +286,9 @@ namespace apListaLigada
 
         }
 
+        int tempoRestante = 5000;
+        int pontos = 0;
+
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             // cria uma instância de Random para gerar números aleatórios
@@ -304,6 +307,11 @@ namespace apListaLigada
             {
                 // exibe a dica da palavra sorteada lida noS label [Dica:].
                 labelDica.Text = $"{lista1.Atual.Info.Dica}";
+                tmrTempo.Enabled = true ;
+                tmrTempo.Start();
+                tempoRestante = 5000;
+                tmrTempo.Interval = 1000;
+                labelTempo.Text = $"Tempo: {tempoRestante}s";
             }
 
             // limpa o DataGridView
@@ -329,37 +337,110 @@ namespace apListaLigada
             }    
         }
 
-
         private void button27_Click(object sender, EventArgs e)
         {
             // pegar letra clicada
             string letra = (sender as Button).Text;
             string caractereAtual = "";
+            int erros = 0;
 
-            int quantasVezesAparece = 0;
+            string palavra = lista1.Atual.Info.Palavra.ToUpper().Trim();
+            string dica = lista1.Atual.Info.Dica.ToUpper().Trim();
+
+            var vetor = new Dicionario(palavra, dica);
 
             // verificar se a letra existe na palavra sorteada
-            string palavra = lista1.Atual.Info.Palavra.ToUpper().Trim();
-            
             if (lista1.Atual.Info.ExisteLetra(letra)) 
             {
+                pontos++;
+
                 for (int i = 0; i <= palavra.Length; i++)
                 {
                     if (caractereAtual != letra)
                     {
                         caractereAtual = palavra.Substring(i, 1);
-                        quantasVezesAparece++;
+                        
+                        //precisaria colocar um vetor.acertou[i] = false, mas a classe ja inicializa com false em todas as posições
                     }
+                    else
+                    {
+                        //se sim, exibir a letra no dataGridView no local indicado
+                        ExibirDGV(0, i, caractereAtual);
 
-                    //marcar com true essa mesma posição no vetor acertou do objeto
+                        //marcar com true essa mesma posição no vetor acertou do objeto
+                        vetor.acertou[i] = true;        //TROCAR TODOS OS ACERTOU POR LÓGICA LISTA
+                    }
+                    
                     // Dicionario que foi sorteado e está armazenado no
                     // vetor interno dados de VetorDicionario.
-                    //verificar se a letra existe na palavra
-                    //se sim, exibir a letra no dataGridView no local indicado
-                    //marcar com true essa mesma posição no vetor acertou
-                    //se não, colocar a proxima foto do homem enforcado
                 }
             }
+            
+            //se não, colocar a proxima foto do homem enforcado
+            else
+            {
+                erros++;
+                pontos--;
+
+                switch (erros) {
+                    case 1: { pict1.Visible = true; break; }
+                    case 2: { pict2.Visible = true; break; }
+                    case 3: { pict3.Visible = true; break; }
+                    case 4: { pict4.Visible = true; break; }
+                    case 5: { pict5.Visible = true; break; }
+                    case 6: { pict6.Visible = true; break; }
+                    case 7: { pict7.Visible = true; break; }
+                    case 8: { 
+                            pict8.Visible = true; 
+                            pictEnforcado1.Visible = true;
+                            pictEnforcado2.Visible = true;
+                            Perdeu();
+                            break; 
+                        }
+
+                    default: { throw new Exception("nsei, colocar um getMessage"); }
+                }
+            }
+
+            labelPontos.Text = $"{pontos}";
+            labelErros.Text = $"{pontos}";
+        }
+
+        public void ExibirDGV(int linha, int coluna, string letra)
+        {
+            dataGridView.Rows[linha].Cells[coluna].Value = letra;
+        }
+
+        private void checkDica_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tmrTempo_Tick(object sender, EventArgs e)
+        {
+            tempoRestante--;
+            labelTempo.Text = $"{tempoRestante}s";
+
+            if (tempoRestante <= 0)
+            {
+                tmrTempo.Stop();
+
+                if (!Ganhou()) // você precisa implementar essa verificação
+                {
+                    Perdeu();
+                }
+            }
+        }
+
+        public bool Ganhou()
+        {
+            return false;
+        }
+
+        public bool Perdeu()
+        {
+            // FECHAR ??
+            return false;
         }
     }
 }
