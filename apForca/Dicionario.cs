@@ -28,7 +28,7 @@ namespace apListaLigada
 
             // Retornar true se a letra sorteada está na palavra(pode haver mais de uma posição)
 
-            for (int i = 0; i < Palavra.Length; i++)
+            for (int i = 0; i < Palavra.Trim().Length; i++)
             {
                 if (Palavra[i].ToString().ToUpper() == letra.ToString().ToUpper())
                 {

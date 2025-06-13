@@ -13,7 +13,7 @@ namespace apListaLigada
 {
     public partial class FrmAlunos : Form
     {
-        ListaDupla<Dicionario> lista1;
+        ListaDupla<Dicionario> lista1 = new ListaDupla<Dicionario>();
         int tempoRestante = 50;     //em segundos
         int pontos = 0;
         string caminho = null;
@@ -404,6 +404,7 @@ namespace apListaLigada
             labelPontos.Text = $"{pontos}";
             labelErros.Text = $"{erros}";
 
+            //oq essa parte faz?
             bool dadoAtual = true;
             //int contador = 0;
 
@@ -422,7 +423,6 @@ namespace apListaLigada
                 else
                 {
                     Perdeu();
-
                 }
             }
         }
@@ -449,6 +449,12 @@ namespace apListaLigada
                 {
                     Perdeu();
                 }
+
+                int alturaFinal = -100;     // para onde a imagem deve subir
+                int velocidadeSubida = 5;   // velocidade da ascensão
+                                            // Mover o PictureBox para cima
+                pictEnforcado1.Top -= velocidadeSubida;
+                pictEnforcado2.Top -= velocidadeSubida;
             }
         }
 
@@ -457,12 +463,12 @@ namespace apListaLigada
             pictGanhou1.Visible = true;
             pictGanhou2.Visible = true;
             pictGanhou3.Visible = true;
+
             return false;
         }
 
         public bool Perdeu()
         {
-            //animação da imagem pictEnforcado1 com timer??????????????????
             pict8.Visible = true;
             pictEnforcado1.Visible = true;
             pictEnforcado2.Visible = true;
