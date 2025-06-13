@@ -14,6 +14,8 @@ namespace apListaLigada
     public partial class FrmAlunos : Form
     {
         ListaDupla<Dicionario> lista1;
+        int tempoRestante = 50;     //em segundos
+        int pontos = 0;
 
         string caminho = null;
 
@@ -286,9 +288,6 @@ namespace apListaLigada
 
         }
 
-        int tempoRestante = 5000;
-        int pontos = 0;
-
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             // cria uma instância de Random para gerar números aleatórios
@@ -302,17 +301,6 @@ namespace apListaLigada
 
             // chama o evento para ocultar a aba de cadastro
             tabControl1_VisibleChanged(sender, e);
-
-            if (checkDica.Checked)
-            {
-                // exibe a dica da palavra sorteada lida noS label [Dica:].
-                labelDica.Text = $"{lista1.Atual.Info.Dica}";
-                tmrTempo.Enabled = true ;
-                tmrTempo.Start();
-                tempoRestante = 5000;
-                tmrTempo.Interval = 1000;
-                labelTempo.Text = $"Tempo: {tempoRestante}s";
-            }
 
             // limpa o DataGridView
             dataGridView.Columns.Clear();
@@ -347,7 +335,8 @@ namespace apListaLigada
             string palavra = lista1.Atual.Info.Palavra.ToUpper().Trim();
             string dica = lista1.Atual.Info.Dica.ToUpper().Trim();
 
-            var vetor = new Dicionario(palavra, dica);
+            Dicionario vetor = lista1.Atual.Info;
+            
 
             // verificar se a letra existe na palavra sorteada
             if (lista1.Atual.Info.ExisteLetra(letra)) 
@@ -359,7 +348,6 @@ namespace apListaLigada
                     if (caractereAtual != letra)
                     {
                         caractereAtual = palavra.Substring(i, 1);
-                        
                         //precisaria colocar um vetor.acertou[i] = false, mas a classe ja inicializa com false em todas as posições
                     }
                     else
@@ -368,11 +356,9 @@ namespace apListaLigada
                         ExibirDGV(0, i, caractereAtual);
 
                         //marcar com true essa mesma posição no vetor acertou do objeto
-                        vetor.acertou[i] = true;        //TROCAR TODOS OS ACERTOU POR LÓGICA LISTA
+                        vetor.acertou[i] = true; ;   //TROCAR TODOS OS ACERTOU POR LÓGICA LISTA -> NÃO SEI COMO FAZER ISSO
+                        //PQ A acertou É LIST E N LISTA LIGADA MSM AAAAAAAAAAAAAAAAA
                     }
-                    
-                    // Dicionario que foi sorteado e está armazenado no
-                    // vetor interno dados de VetorDicionario.
                 }
             }
             
@@ -394,11 +380,11 @@ namespace apListaLigada
                             pict8.Visible = true; 
                             pictEnforcado1.Visible = true;
                             pictEnforcado2.Visible = true;
-                            Perdeu();
+                            //Perdeu();  --> precisa achar um jeito de parar o jogo, mas como??
                             break; 
                         }
 
-                    default: { throw new Exception("nsei, colocar um getMessage"); }
+                    default: { throw new Exception("Valor de erros fora do previsto."); }
                 }
             }
 
@@ -413,7 +399,23 @@ namespace apListaLigada
 
         private void checkDica_CheckedChanged(object sender, EventArgs e)
         {
+            if (checkDica.Checked)
+            {
+                //mostra a dica
+                labelDica.Text = lista1.Atual.Info.Dica;
 
+                //inicia contagem regressiva
+                tempoRestante = 50;
+                labelTempo.Text = $"Tempo: {tempoRestante}s";
+                tmrTempo.Interval = 50000; // 50 segundos
+                tmrTempo.Start();
+            }
+            else
+            { 
+                labelDica.Text = "";
+                tmrTempo.Stop();
+                labelTempo.Text = "";
+            }
         }
 
         private void tmrTempo_Tick(object sender, EventArgs e)
