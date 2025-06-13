@@ -331,13 +331,13 @@ namespace apListaLigada
             string letra = (sender as Button).Text;
             string caractereAtual = "";
             int erros = 0;
+            int indicePalavra = 0;
 
             string palavra = lista1.Atual.Info.Palavra.ToUpper().Trim();
             string dica = lista1.Atual.Info.Dica.ToUpper().Trim();
 
             Dicionario vetor = lista1.Atual.Info;
             
-
             // verificar se a letra existe na palavra sorteada
             if (lista1.Atual.Info.ExisteLetra(letra)) 
             {
@@ -348,20 +348,21 @@ namespace apListaLigada
                     if (caractereAtual != letra)
                     {
                         caractereAtual = palavra.Substring(i, 1);
+                        
                         //precisaria colocar um vetor.acertou[i] = false, mas a classe ja inicializa com false em todas as posições
                     }
                     else
                     {
                         //se sim, exibir a letra no dataGridView no local indicado
                         ExibirDGV(0, i, caractereAtual);
-
+                        indicePalavra++;
                         //marcar com true essa mesma posição no vetor acertou do objeto
                         vetor.acertou[i] = true; ;   //TROCAR TODOS OS ACERTOU POR LÓGICA LISTA -> NÃO SEI COMO FAZER ISSO
                         //PQ A acertou É LIST E N LISTA LIGADA MSM AAAAAAAAAAAAAAAAA
                     }
                 }
             }
-            
+
             //se não, colocar a proxima foto do homem enforcado
             else
             {
@@ -389,7 +390,28 @@ namespace apListaLigada
             }
 
             labelPontos.Text = $"{pontos}";
-            labelErros.Text = $"{pontos}";
+            labelErros.Text = $"{erros}";
+
+            bool dadoAtual = true;
+            //int contador = 0;
+
+            if (indicePalavra == palavra.Length) {
+                while (dadoAtual)
+                {
+                    for (int i = 0; i < palavra.Length; i++)
+                    {
+                        dadoAtual = vetor.acertou[i];
+                    }
+                }
+                if (dadoAtual)
+                {
+                    Ganhou();
+                }
+                else
+                {
+                    Perdeu();
+                }
+            }
         }
 
         public void ExibirDGV(int linha, int coluna, string letra)
