@@ -737,7 +737,6 @@
             this.checkDica.TabIndex = 63;
             this.checkDica.Text = "Com dica";
             this.checkDica.UseVisualStyleBackColor = true;
-            this.checkDica.CheckedChanged += new System.EventHandler(this.checkDica_CheckedChanged);
             // 
             // labelArduino
             // 

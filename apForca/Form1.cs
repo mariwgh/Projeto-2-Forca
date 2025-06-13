@@ -16,7 +16,6 @@ namespace apListaLigada
         ListaDupla<Dicionario> lista1;
         int tempoRestante = 50;     //em segundos
         int pontos = 0;
-
         string caminho = null;
 
         public FrmAlunos()
@@ -307,6 +306,21 @@ namespace apListaLigada
 
             // configura para que o numero de colunas seja igual ao número de caracteres (sem os espaços à direita) da palavra lida do arquivo.
             dataGridView.ColumnCount = lista1.Atual.Info.Palavra.ToUpper().Trim().Length;
+
+            if (checkDica.Checked)
+            {
+                // exibe a dica da palavra sorteada lida noS label [Dica:].
+                labelDica.Text = $"{lista1.Atual.Info.Dica}";
+                tmrTempo.Enabled = true;
+                tmrTempo.Start();
+                tempoRestante = 5000;
+                tmrTempo.Interval = 1000;
+                labelTempo.Text = $"Tempo: {tempoRestante}s";
+            }
+
+            if (checkArduino.Checked) {
+                ArduinoVisivel();
+            }
         }
 
         private void tabControl1_VisibleChanged(object sender, EventArgs e)
@@ -378,12 +392,10 @@ namespace apListaLigada
                     case 6: { pict6.Visible = true; break; }
                     case 7: { pict7.Visible = true; break; }
                     case 8: { 
-                            pict8.Visible = true; 
-                            pictEnforcado1.Visible = true;
-                            pictEnforcado2.Visible = true;
-                            //Perdeu();  --> precisa achar um jeito de parar o jogo, mas como??
+                            
+                            Perdeu();  //--> precisa achar um jeito de parar o jogo, mas como??
                             break; 
-                        }
+                    }
 
                     default: { throw new Exception("Valor de erros fora do previsto."); }
                 }
@@ -410,6 +422,7 @@ namespace apListaLigada
                 else
                 {
                     Perdeu();
+
                 }
             }
         }
@@ -419,37 +432,20 @@ namespace apListaLigada
             dataGridView.Rows[linha].Cells[coluna].Value = letra;
         }
 
-        private void checkDica_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkDica.Checked)
-            {
-                //mostra a dica
-                labelDica.Text = lista1.Atual.Info.Dica;
-
-                //inicia contagem regressiva
-                tempoRestante = 50;
-                labelTempo.Text = $"Tempo: {tempoRestante}s";
-                tmrTempo.Interval = 50000; // 50 segundos
-                tmrTempo.Start();
-            }
-            else
-            { 
-                labelDica.Text = "";
-                tmrTempo.Stop();
-                labelTempo.Text = "";
-            }
-        }
-
+        //a cada segundo ele chama essa funcao, logo, diminui a contagem do tempo restante a cada 1 segundo e exibe,
+        //verificando se o tempo acabou ou nao 
         private void tmrTempo_Tick(object sender, EventArgs e)
         {
             tempoRestante--;
             labelTempo.Text = $"{tempoRestante}s";
 
+            //se o tempo acabou
             if (tempoRestante <= 0)
             {
                 tmrTempo.Stop();
 
-                if (!Ganhou()) // você precisa implementar essa verificação
+                //tempo acabou e ele n ganhou, perdeu
+                if (!Ganhou()) 
                 {
                     Perdeu();
                 }
@@ -458,13 +454,25 @@ namespace apListaLigada
 
         public bool Ganhou()
         {
+            pictGanhou1.Visible = true;
+            pictGanhou2.Visible = true;
+            pictGanhou3.Visible = true;
             return false;
         }
 
         public bool Perdeu()
         {
-            // FECHAR ??
+            //animação da imagem pictEnforcado1 com timer??????????????????
+            pict8.Visible = true;
+            pictEnforcado1.Visible = true;
+            pictEnforcado2.Visible = true;
             return false;
+        }
+
+        public void ArduinoVisivel()
+        {
+            labelArduino.Visible = true;
+            txtPortaArduino.Visible = true;
         }
     }
 }
