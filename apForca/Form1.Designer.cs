@@ -141,6 +141,7 @@
             this.slRegistro = new System.Windows.Forms.ToolStripStatusLabel();
             this.imlBotoes = new System.Windows.Forms.ImageList(this.components);
             this.tmrTempo = new System.Windows.Forms.Timer(this.components);
+            this.tmrEnforcado = new System.Windows.Forms.Timer(this.components);
             this.tsBotoes.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpCadastro.SuspendLayout();
@@ -253,7 +254,7 @@
             this.btnProximo.Image = ((System.Drawing.Image)(resources.GetObject("btnProximo.Image")));
             this.btnProximo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(56, 35);
+            this.btnProximo.Size = new System.Drawing.Size(55, 35);
             this.btnProximo.Text = "Próximo";
             this.btnProximo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
@@ -323,7 +324,7 @@
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
             this.btnExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(46, 35);
+            this.btnExcluir.Size = new System.Drawing.Size(45, 35);
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -1351,6 +1352,10 @@
             // 
             this.tmrTempo.Tick += new System.EventHandler(this.tmrTempo_Tick);
             // 
+            // tmrEnforcado
+            // 
+            this.tmrEnforcado.Tick += new System.EventHandler(this.tmrEnforcado_Tick);
+            // 
             // FrmAlunos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1513,6 +1518,7 @@
         private System.Windows.Forms.Label labelErros;
         private System.Windows.Forms.Label labelPontos;
         private System.Windows.Forms.PictureBox pictEnforcado1;
+        private System.Windows.Forms.Timer tmrEnforcado;
     }
 }
 

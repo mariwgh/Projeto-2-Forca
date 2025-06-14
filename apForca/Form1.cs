@@ -17,6 +17,8 @@ namespace apListaLigada
         int tempoRestante = 50;     //em segundos
         int pontos = 0;
         string caminho = null;
+        int limiteSuperior = 0; // y mínimo que o enforcado pode subir
+
 
         public FrmAlunos()
         {
@@ -460,25 +462,53 @@ namespace apListaLigada
 
         public bool Ganhou()
         {
-            pictGanhou1.Visible = true;
-            pictGanhou2.Visible = true;
-            pictGanhou3.Visible = true;
-
-            return false;
+            bool venceu = false;
+            if (pontos == lista1.Atual.Info.Palavra.Trim().Length)
+            {
+                pictGanhou1.Visible = true;
+                pictGanhou2.Visible = true;
+                pictGanhou3.Visible = true;
+                venceu = true;
+            }
+            return venceu;
         }
 
         public bool Perdeu()
         {
-            pict8.Visible = true;
-            pictEnforcado1.Visible = true;
-            pictEnforcado2.Visible = true;
-            return false;
+            bool derrota = false;
+            if (pontos != lista1.Atual.Info.Palavra.Trim().Length)
+            {
+                pict8.Visible = true;
+
+                pictEnforcado1.Visible = true;
+                limiteSuperior = pictEnforcado1.Top - 150;
+                tmrEnforcado.Start();
+
+                pictEnforcado2.Visible = true;
+
+                derrota = true;
+            }
+               
+            //fzr a animação aqui
+           
+            return derrota;
         }
 
         public void ArduinoVisivel()
         {
             labelArduino.Visible = true;
             txtPortaArduino.Visible = true;
+        }
+
+        private void tmrEnforcado_Tick(object sender, EventArgs e)
+        {
+            pictEnforcado1.Top -= 5;  // sobe 5 pixels por tick
+
+            if (pictEnforcado1.Top <= limiteSuperior)
+            {
+                tmrEnforcado.Stop();
+                MessageBox.Show("Ele ascendeu aos céus...");
+            }
         }
     }
 }
